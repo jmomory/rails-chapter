@@ -5,6 +5,7 @@ This repository is an example of an application run with docker with a server in
 ## Installation
 #### Run all services
 ```sh
+cd client && yarn install
 docker-compose up
 ```
 
