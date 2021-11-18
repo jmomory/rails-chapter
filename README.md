@@ -16,6 +16,7 @@ make compose svc=<client|server>
 
 #### Init db
 ```sh
+docker-compose run server rails db:create db:migrate
 curl -X POST 'http://localhost:4000/api/orders/populate'
 ```
 after this command you will be able to go to `http://localhost:3000/` then enjoy
@@ -46,3 +47,8 @@ this command will stop all your containers (command run: `docker stop $(docker p
 make stop-container
 ```
 
+## Error Pids
+```sh
+docker-compose run server /bin/bash
+rm tmp/pids/server.pid
+```
