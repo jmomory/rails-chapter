@@ -1,0 +1,17 @@
+.header-app {
+  display: flex;
+  background-color: black;
+  height: 60px;
+  width: 100%;
+}
+
+.logo {
+  height: 60px;
+  width: 200px;
+  margin-left: 10px;
+  float: left;
+}
+
+.dropdown {
+  margin: 10px;
+}

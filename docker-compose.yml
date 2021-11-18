@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  server:
+    build: server
+    depends_on:
+      - db
+    volumes:
+      - ./server:/usr/src/app
+    ports:
+      - "4000:3000"
+  client:
+    build:
+      context: ./client/
+    command: npm start
+    volumes:
+      - ./client/:/usr/src/app
+      - ./client/node_modules:/usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      ALLOW_IP_RANGE: 0.0.0.0/0
+    ports:
+      - 54321:5432

@@ -1,0 +1,49 @@
+.loader {
+  font-size: 10px;
+  margin: auto;
+  text-align: center;
+
+  .rect {
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    border-radius: 8px;
+    display: inline-block;
+    height: 100%;
+    margin-left: 2px;
+    width: 5px;
+
+    &.rect1 {
+      background-color: $color-blue;
+    }
+
+    &.rect2 {
+      animation-delay: -1.1s;
+      background-color: $color-red;
+    }
+
+    &.rect3 {
+      animation-delay: -1s;
+      background-color: $color-green;
+    }
+
+    &.rect4 {
+      animation-delay: -0.9s;
+      background-color: $color-yellow;
+    }
+
+    &.rect5 {
+      animation-delay: -0.8s;
+      background-color: $color-light-blue;
+    }
+  }
+  @keyframes sk-stretchdelay {
+    0%,
+    40%,
+    100% {
+      transform: scaleY(0.4);
+    }
+
+    20% {
+      transform: scaleY(1);
+    }
+  }
+}
