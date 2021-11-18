@@ -1,0 +1,12 @@
+/tmp
+/server/node_modules
+/client/node_modules
+
+# Ignore all logfiles and tempfiles.
+/server/log/*
+/server/tmp/*
+!/server/log/.keep
+!/server/tmp/.keep
+
+/client/yarn.lock
+/server/yarn.lock
